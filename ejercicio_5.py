@@ -14,7 +14,14 @@ f. Remover los elementos repetidos
 
 numeros = []
 
-entrada = input('Ingrese un numero entero o "fin" para ternminar: ')
 
-while entrada.lower() != 'fin':
-    
+while True:
+    entrada = input('Ingrese un numero entero o "fin" para ternminar: ')
+    if entrada.lower == 'fin':
+        break
+    if entrada.isdigit() or entrada[0] == '-' and entrada[1:].isdigit(): # si es nunero entero positivo o negativo
+        numero = int(entrada)
+        numeros.append(numero)
+    else:
+        print('la entrada no es valida por favor ingrese un nujmero entero. ')
+        
