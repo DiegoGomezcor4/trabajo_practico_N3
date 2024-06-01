@@ -26,7 +26,7 @@ def ingresar_numeros():
             print('fin de la carga')
             break
         else:
-            print()
+            print('Tiene que ingesar por lo menos un numero')
         
         if entrada.isdigit() or entrada[0] == '-' and entrada[1:].isdigit(): # si es nunero entero positivo o negativo
             numero = int(entrada)
