@@ -11,20 +11,73 @@ e. Contar los valores pares e impares.
 f. Remover los elementos repetidos
 """
 
+def ingresar_numeros():
+    numeros = []
 
-numeros = []
-
-
-while True:
-    entrada = input('Ingrese un numero entero o "fin" para ternminar: ')
-    if entrada.lower() == 'fin':
-        print('saliendo del programa')
-        break
+    while True:
+        entrada = input('Ingrese un numero entero o "fin" para ternminar: ')
+        if entrada.lower() == 'fin':
+            print('fin de la carga')
+            break
         
-    if entrada.isdigit() or entrada[0] == '-' and entrada[1:].isdigit(): # si es nunero entero positivo o negativo
-        numero = int(entrada)
-        numeros.append(numero)
-    else:
-        print('la entrada no es valida por favor ingrese un nujmero entero. ')
+        if entrada.isdigit() or entrada[0] == '-' and entrada[1:].isdigit(): # si es nunero entero positivo o negativo
+            numero = int(entrada)
+            numeros.append(numero)
+        else:
+            print('la entrada no es valida por favor ingrese un nujmero entero. ')
 
-print(numeros)   
+        print(numeros) 
+    
+    return numeros  
+
+
+
+def maximo_en_lista(list):
+    maximo = max(list)
+    print("El maximo de la lista es: ", maximo)
+
+
+
+def segundo_maximo(list):
+    #convierte en conjunto para eliminar elementos duplicados, y los ordena de manera descendente
+    numeros_ordenados = sorted(set(list), reverse=True)
+
+    #si la longitud de la lista es mayor que uno toma el segundo elemento sino, asigna none a la variable segundo maximo
+    segundo_maximo = numeros_ordenados[1] if len(numeros_ordenados) > 1 else None
+    print("El segundo maximo es: ", segundo_maximo)
+
+
+
+def minimo_en_lista(list):
+    minimo = min(list)
+    print("El mínimo es:", minimo)
+
+
+
+def multiplicar_elementos(list):
+    multiplicacion = 1
+    for elemento in list:
+        multiplicacion *= elemento
+    print("La multiplicación de todos los números es:", multiplicacion)
+
+
+
+lista = ingresar_numeros()
+
+# a. Determinar el maximo
+maximo_en_lista(lista)
+
+# b. Obtener segundo valor máximo. Es decir el que le sigue al máximo.
+segundo_maximo(lista)
+
+#c. Determinar el mínimo.
+minimo_en_lista(lista)
+
+#d. Calcular la multiplicación de  todos los números de la lista.
+multiplicar_elementos(lista)
+
+
+
+
+
+
