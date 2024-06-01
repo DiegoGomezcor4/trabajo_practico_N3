@@ -19,14 +19,14 @@ def ingresar_numeros():
 
         if not entrada:  # Si la entrada esta vacia
             if not numeros:  # Y la lista de números también está vacía
-                print("No se ingresaron números.")
-                break  # Salir del bucle
-            else:
-                continue  # Continuar pidiendo entrada
+                print("Tiene que ingresar por lo menos un numero.")
+                continue
 
-        if entrada.lower() == 'fin': # si ingresa fin, inicia las operaciones sobre la lista
+        if entrada.lower() == 'fin' and numeros: # si ingresa fin, inicia las operaciones sobre la lista
             print('fin de la carga')
             break
+        else:
+            print()
         
         if entrada.isdigit() or entrada[0] == '-' and entrada[1:].isdigit(): # si es nunero entero positivo o negativo
             numero = int(entrada)
