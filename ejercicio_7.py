@@ -10,16 +10,19 @@ listas.
 """
 
 
-def agregar_tarea_pendiente():
-    pass
+def agregar_tarea_pendiente(tareas_pendientes):
+    tarea = input('Ingrese una tarea para agregar a pendientes: ')
+    tareas_pendientes.append(tarea)
+    mostrar_listas()
 
 
 def marcar_tarea_como_terminada(tareas_pendientes, tareas_terminadas):
     pass
 
 
-def mostrar_listas(tareas_pendientes, tareas_terminadas)
-    pass
+def mostrar_listas():
+    print('Tareas pendientes ', lista_pendientes)
+    print('Tareas terminadas', lista_terminadas)
 
 
 lista_pendientes = []
@@ -31,6 +34,23 @@ while True:
     print('b. Marcar una tarea pendiente como terminada')
     print('c. Mostrar las listas de tareas')
     print('q. Salir')
+
+    opcion = input().lower();
+
+    match opcion:
+        case 'a':
+            agregar_tarea_pendiente(lista_pendientes)
+        case 'b':
+            # Código a ejecutar si variable es igual a valor2
+            pass
+        case 'c':
+            pass
+        case 'q':
+            print('saliendo del programa')
+            break
+        case _:
+            # Código a ejecutar si ninguno de los casos es igual a variable
+            pass
 
     
 
