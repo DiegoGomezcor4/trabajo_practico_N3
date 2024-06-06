@@ -21,14 +21,15 @@ def marcar_tarea_como_terminada(tareas_pendientes, tareas_terminadas):
     if tarea in tareas_pendientes:
         tareas_pendientes.remove(tarea)
         tareas_terminadas.append(tarea)
+        print(f'La tarea ({tarea}), paso de pendientes a terminada')
     else:
-        print('la tarea no se encuentra como pendiente!!!')
+        print('\n¡Atencion! La tarea no se encuentra como pendiente')
     mostrar_listas()
     
 
 
 def mostrar_listas():
-    print('Tareas pendientes ', lista_pendientes)
+    print('\nTareas pendientes ', lista_pendientes)
     print('Tareas terminadas', lista_terminadas)
 
 
@@ -36,7 +37,7 @@ lista_pendientes = []
 lista_terminadas = []
 
 while True:
-    print('Elija una opcion:')
+    print('\n Elija una opcion:')
     print('a. Agregar una nueva tarea pendiente')
     print('b. Marcar una tarea pendiente como terminada')
     print('c. Mostrar las listas de tareas')
@@ -55,8 +56,8 @@ while True:
             print('saliendo del programa')
             break
         case _:
-            # Código a ejecutar si ninguno de los casos es igual a variable
-            pass
+            print('¡Atencion! Seleccione una opcion valida')
 
     
+
 
