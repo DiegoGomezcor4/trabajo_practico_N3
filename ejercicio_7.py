@@ -17,7 +17,14 @@ def agregar_tarea_pendiente(tareas_pendientes):
 
 
 def marcar_tarea_como_terminada(tareas_pendientes, tareas_terminadas):
-    pass
+    tarea = input('Ingrese la tarea a marcar como terminada: ')
+    if tarea in tareas_pendientes:
+        tareas_pendientes.remove(tarea)
+        tareas_terminadas.append(tarea)
+    else:
+        print('la tarea no se encuentra como pendiente!!!')
+    mostrar_listas()
+    
 
 
 def mostrar_listas():
@@ -41,10 +48,9 @@ while True:
         case 'a':
             agregar_tarea_pendiente(lista_pendientes)
         case 'b':
-            # Código a ejecutar si variable es igual a valor2
-            pass
+            marcar_tarea_como_terminada(lista_pendientes, lista_terminadas)
         case 'c':
-            pass
+            mostrar_listas()
         case 'q':
             print('saliendo del programa')
             break
