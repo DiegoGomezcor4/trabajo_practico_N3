@@ -42,7 +42,8 @@ else:
 
 print()
 
-#e .
+#e .Permitir al usuario ingresar un número igual o menor a la cantidad de elementos de
+# la lista. Quitar el elemento correspondiente de esa posición.
 print('e. ')
 numero = int(input(f'Ingrese un numero igual o menor que {len(paises)}: '))
 if numero <= len(paises):
