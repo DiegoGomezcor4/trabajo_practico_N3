@@ -43,7 +43,7 @@ while True:
     print('c. Mostrar las listas de tareas')
     print('q. Salir')
 
-    opcion = input().lower();
+    opcion = input().lower()
 
     match opcion:
         case 'a':
