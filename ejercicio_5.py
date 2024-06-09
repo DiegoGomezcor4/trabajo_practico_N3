@@ -82,7 +82,7 @@ def contar_pares_impares(lis):
 
 
 def remover_repetidos(lis):
-    elementos_sin_repetir = list(set(lis))
+    elementos_sin_repetir = list(set(lis)) # convierte en conjunto para eliminar elementos duplicados
     print("Lista sin elementos repetidos:", elementos_sin_repetir)
 
 
