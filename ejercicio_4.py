@@ -14,24 +14,25 @@ g. Vaciar la lista.
 
 paises = ['Argentina' ,'Brasil', 'Bolivia' ,'Paraguay' ,'Venezuela']
 
-# a.
+# a.Imprimir la cantidad de elementos que tiene la lista.
 print(f'a. Cantidad de elementos de la lista: {len(paises)}')
 print()
 
-# b.
+# b.Imprimir el primer y último elemento.
 print('b. ')
 print(f'El primer elemento es: {paises[0]}')
 print(f'El ultimo elemento es: {paises[-1]}')
 print()
 
-# c.
+# c.Imprimir el resto.
 print('c.')
 print('El resto de los elementos son: ')
 for i in range(1, len(paises) - 1):
     print(paises[i])
 print()
 
-#d .
+#d . Permitir que el usuario ingrese un país e imprimir el índice si el país se encuentra en
+    # la lista. Si no se encuentra, imprimir un mensaje advirtiendo al usuario.
 print('d. ')
 pais_buscado = input('Ingrese un pais: ')
 
@@ -43,27 +44,31 @@ else:
 print()
 
 #e .Permitir al usuario ingresar un número igual o menor a la cantidad de elementos de
-# la lista. Quitar el elemento correspondiente de esa posición.
+    # la lista. Quitar el elemento correspondiente de esa posición.
 print('e. ')
 numero = int(input(f'Ingrese un numero igual o menor que {len(paises)}: '))
-if numero <= len(paises):
-    pais_eliminado = paises.pop(numero - 1)
-    print(f'se ha eliminado el pais {pais_eliminado} de la lista')
-else:
-    print(f'el numero ingresado no es menor o igual a {len(paises)}')
+
+while True:
+    if numero <= len(paises):
+        pais_eliminado = paises.pop(numero - 1)
+        print(f'se ha eliminado el pais {pais_eliminado} de la lista')
+        break
+    else:
+        print(f'el numero ingresado no es menor o igual a {len(paises)}')
 
 for pais in paises:
     print(pais)
 print()
 
-#f .
+
+#f Imprimir la lista en orden inverso.
 print('f. Imprimiendo la lista en orden inverso: ')
 for i in range(len(paises) - 1, -1, -1):
     print(paises[i])
 
 print()
 
-#g .
+#g Vaciar la lista.
 print('g. ')
 paises.clear()
 print('La lista a sido vaciada ', paises)
